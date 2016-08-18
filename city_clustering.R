@@ -14,23 +14,23 @@
 
 
 ## This R script is part of the Jackson Analytics Kickstart Challenge A project.
-## The goal is to use demographic, economic, and geographic data to identify cities that are similar to Jackson, Mississippi. 
+## The goal is to use demographic, economic, and geographic data to identify cities that are similar to Jackson, Mississippi.
 ## Analysis methods include general exploration and hierarchical clustering.
 
-## This file is also designed to be a tutorial for users wanting to replicate and maniupulate the analysis. 
+## This file is also designed to be a tutorial for users wanting to replicate and maniupulate the analysis.
 
-## Download city indicator dataset 
+## Download city indicator dataset
 ## https://drive.google.com/open?id=0B9FLZ57ziQq5UVZrQnJOYkFpMHc
 
 ## Load data
 data <- read.csv("~/Downloads/city_indicator_dataset.csv")
 
-## Run basic descriptive statistics on the dataset. 
+## Run basic descriptive statistics on the dataset.
 ## This function shows the mean, median, etc, of the observations in each column of the dataset.
 summary(data)
 
-## Assign variable names to dataset columns. 
-## Make sure the variables are stored in the appropriate data type. 
+## Assign variable names to dataset columns.
+## Make sure the variables are stored in the appropriate data type.
 ## Categorical variables (names, regions, etc.) should be stored as factors.
 ## Number variables should be automatically recognized.
 
@@ -53,7 +53,7 @@ x5 <-  mmscalar(data$Nonwhite) * med_weight
 x6 <-  mmscalar(data$Land.Area.Sq.M) * med_weight
 x7 <-  mmscalar(data$Density_pop_sq_km) * low_weight
 # na.rm = T passes the NAs through the calculation so they can be imputed later
-x8 <-  mmscalar(data$FT_emp, na.rm = T) 
+x8 <-  mmscalar(data$FT_emp, na.rm = T)
 x9 <-  mmscalar(data$FT_pay, na.rm = T)
 x10 <- mmscalar(data$PT_emp, na.rm = T)
 x11 <- mmscalar(data$PT_pay, na.rm = T)
@@ -75,7 +75,7 @@ x.impute <- knnImputation((x <- cbind(x1,x2,x3,x4,x5,x6,x7,x8,x9,x10,x11,x12)), 
                           distData = NULL)
 x.impute <- cbind(x.impute, x13,x15)
 
-## The R functions we will use later require data to be stored as data frames, so we need to convert the imputed datasets into data frames. 
+## The R functions we will use later require data to be stored as data frames, so we need to convert the imputed datasets into data frames.
 x.impute.df <- as.data.frame(x.impute)
 
 library(cluster)
@@ -84,7 +84,7 @@ x.agnes <- agnes(x.impute.df)
 
 
 ## Cluster Models
-## The following functions calculate the similarity between the two cluster methods. 
+## The following functions calculate the similarity between the two cluster methods.
 library(factoextra)
 library(dendextend)
 dend1 <- as.dendrogram(x.diana)
@@ -93,9 +93,9 @@ dend2 <- as.dendrogram(x.agnes)
 dend_list <- dendlist(dend1, dend2)
 
 tanglegram(dend1, dend2,
-           highlight_distinct_edges = TRUE, 
-           common_subtrees_color_lines = TRUE, 
-           common_subtrees_color_branches = TRUE,  
+           highlight_distinct_edges = TRUE,
+           common_subtrees_color_lines = TRUE,
+           common_subtrees_color_branches = TRUE,
            main = paste("entanglement =", round(entanglement(dend_list), 2))
 )
 
@@ -107,5 +107,3 @@ par(cex=.3)
 plot(x.agnes, labels = data$City)
 
 plot(x.diana, labels = data$City)
-
-
