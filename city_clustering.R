@@ -76,7 +76,7 @@ x.impute <- knnImputation((x <- cbind(x1,x2,x3,x4,x5,x6,x7,x8,x9,x10,x11,x12)), 
 x.impute <- cbind(x.impute, x13,x15)
 
 ## The R functions we will use later require data to be stored as data frames, so we need to convert the imputed datasets into data frames. 
-x.impute.df <- as.data.frame(x.impute.df)
+x.impute.df <- as.data.frame(x.impute)
 
 library(cluster)
 x.diana <- diana(x.impute.df)
