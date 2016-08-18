@@ -58,12 +58,9 @@ x9 <-  mmscalar(data$FT_pay, na.rm = T)
 x10 <- mmscalar(data$PT_emp, na.rm = T)
 x11 <- mmscalar(data$PT_pay, na.rm = T)
 x12 <- mmscalar(data$FTE, na.rm= T)
+x13 <-(as.factor(data$State_Capital))
 
 ## Convert categorical variables into dummy variables
-x13 <-(as.factor(data$State_Capital))
-x13 <- dummy(data$State_Capital, data = NULL, fun = as.factor)
-
-
 x15 <-(as.factor(data$Region))
 x15 <- dummy(data$Region, data = NULL, fun = as.factor)
 x15 <- as.data.frame(x15)
