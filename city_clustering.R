@@ -23,7 +23,8 @@
 ## https://drive.google.com/open?id=0B9FLZ57ziQq5UVZrQnJOYkFpMHc
 
 ## Load data
-data <- read.csv("~/Downloads/city_indicator_dataset.csv")
+data <- read.csv("/Users/richarddunks/Dropbox/Datapolitan/Projects/GovEx/jackson/code/Jackson/city_indicator_dataset.csv")
+
 
 ## Run basic descriptive statistics on the dataset. 
 ## This function shows the mean, median, etc, of the observations in each column of the dataset.
