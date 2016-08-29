@@ -34,13 +34,13 @@ med_weight = 10
 high_weight = 50
 
 x0 <- as.character.factor(data$CityName)
-x1 <- mmscalar(data$X2013pop)
-x2 <- mmscalar(data$Growth) 
-x3 <- mmscalar(data$Median.Income) 
-x4 <- mmscalar(data$Poverty) 
-x5 <-  mmscalar(data$Nonwhite) 
-x6 <-  mmscalar(data$Land.Area.Sq.M) 
-x7 <-  mmscalar(data$Density_pop_sq_km) 
+x1 <- mmscalar(data$X2013pop) * high_weight
+x2 <- mmscalar(data$Growth) * high_weight
+x3 <- mmscalar(data$Median.Income) * low_weight
+x4 <- mmscalar(data$Poverty) * low_weight
+x5 <-  mmscalar(data$Nonwhite) * low_weight
+x6 <-  mmscalar(data$Land.Area.Sq.M) * high_weight
+x7 <-  mmscalar(data$Density_pop_sq_km) * high_weight
 # na.rm = T passes the NAs through the calculation so they can be imputed later
 x8 <-  mmscalar(data$FT_emp, na.rm = T)
 x9 <-  mmscalar(data$FT_pay, na.rm = T)
@@ -50,10 +50,10 @@ x12 <- mmscalar(data$FTE, na.rm= T)
 x13 <-(as.factor(data$State_Capital))
 
 ## Convert categorical variables into dummy variables
-x15 <-(as.factor(data$Region))
-x15 <- dummy(data$Region, data = NULL, fun = as.factor)
-x15 <- as.data.frame(x15)
-x15 <- x15[,-3]
+x14 <-(as.factor(data$Region))
+x14 <- dummy(data$Region, data = NULL, fun = as.factor)
+x14 <- as.data.frame(x14)
+x14 <- x14[,-3]
 
 
 ## Combine into dataframe
@@ -76,6 +76,8 @@ x.agnes <- agnes(x.impute.df)
 ## The following functions calculate the similarity between the two cluster methods.
 library(factoextra)
 library(dendextend)
+
+##Dendrograms
 dend1 <- as.dendrogram(x.diana)
 dend2 <- as.dendrogram(x.agnes)
 
