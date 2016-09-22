@@ -1,15 +1,17 @@
 ## The content of this project is licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0).
 ## https://creativecommons.org/licenses/by/4.0/
 
-## This R script is part of the Jackson Analytics Kickstart Challenge A project.
-## The goal is to use demographic, economic, and geographic data to identify cities that are similar to Jackson, Mississippi.
-## Analysis methods include general exploration and hierarchical clustering.
+## Jackson Analytics Kickstart - Challenge A
+## This script uses demographic, economic, and geographic data to identify cities that are similar to Jackson, Mississippi.
+## Analytical methods include general data exploration and hierarchical clustering.
 
 ## This file is also designed to be a tutorial for users wanting to replicate and maniupulate the analysis.
 
-## Download city indicator dataset
+## First, download city indicator dataset. This includes data from the American Community Survey, State and Local Government Finance Survey, and the Government Employment and Payroll Survey. 
 ## https://drive.google.com/open?id=0B9FLZ57ziQq5UVZrQnJOYkFpMHc
 
+
+## 
 ## Assign variable names to dataset columns.
 ## Make sure the variables are stored in the appropriate data type.
 ## Categorical variables (names, regions, etc.) should be stored as factors.
