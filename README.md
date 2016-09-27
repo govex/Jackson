@@ -1,6 +1,6 @@
 # Compared to Jackson
 
-Compared to Jackson is a collaborative project between the City of Jackson, Mississippi and the Center for Government Excellence to help city residents, employees and leaders make collaborative resource decisions based on intelligence gathered from a network of comparable U.S. cities.
+Compared to Jackson is a collaborative project between the City of Jackson, Mississippi and the Center for Government Excellence to help city residents, employees and leaders make collaborative resource decisions based on intelligence gathered from a cohort of comparable U.S. cities.
 
 # Datasets
 [Compared_to_Jackson.xlsx](/Compared_to_Jackson.xlsx) is a compilation of budget information from six U.S. cities. The budget data was hand-collected and tranformed into a standard format for analysis. 
