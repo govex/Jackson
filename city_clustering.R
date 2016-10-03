@@ -1,8 +1,7 @@
 ## The content of this project is licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0).
 ## https://creativecommons.org/licenses/by/4.0/
 
-## Jackson Analytics Kickstart - Challenge A
-## This script uses demographic, economic, and geographic data to identify cities that are similar to Jackson, Mississippi.
+## This script uses demographic, economic, and geographic data to identify cities that are similar to one another.
 ## Analytical methods include general data exploration and hierarchical clustering.
 
 ## This file is also designed to be a tutorial for users wanting to replicate and maniupulate the analysis.
