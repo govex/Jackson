@@ -8,6 +8,9 @@ Compared to Jackson is a collaborative project between the City of Jackson, Miss
 # Compared to Jackson Dashboard
 The data in this repository was visualized using Tableau and can be viewed [here](http://labs.centerforgov.org/projects/kickstarts/index_jackson.html).
 
+# Cohort Selection
+Information on how we identified comparable cities can be found in our [City Cluster repository](https://github.com/govex/city-cluster).
+
 # How We Did It
 Read our [How We Did It](https://docs.google.com/document/d/1sZ3TfcBI8kZmls6NH7yIwW1_dym_3DLieyFwvIhAtqg/edit#) guide to learn about this project from start to finish.
 
