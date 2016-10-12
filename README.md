@@ -14,6 +14,6 @@ The data in this repository was visualized using Tableau and can be viewed [here
 The cities used in the Compared to Jackson analysis were selected from a hierarchical cluster model. Details about this model can be found in the [city_clustering.R script](/city_clustering.R).
 
 # How We Did It
-Read our [How We Did It](insert link when guide is finished) guide to learn about this project from start to finish. 
+Read our [How We Did It](https://docs.google.com/document/d/1sZ3TfcBI8kZmls6NH7yIwW1_dym_3DLieyFwvIhAtqg/edit#) guide to learn about this project from start to finish. 
 
 If you would like more information, please contact me at nghadji@jhu.edu. 
