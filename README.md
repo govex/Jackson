@@ -14,4 +14,7 @@ Information on how we identified comparable cities can be found in our [City Clu
 # How We Did It
 Read our [How We Did It](https://github.com/govex/Jackson/blob/master/Jackson%20-%20How%20We%20Did%20It.pdf) guide to learn about this project from start to finish.
 
+# Training Presentation
+[Training presentation](https://github.com/govex/Jackson/blob/master/Jackson%20MS%20Training%20Presentation.pdf) about finding, cleaning, and analyzing data. 
+
 If you would like more information, please contact me at nghadji@jhu.edu.
