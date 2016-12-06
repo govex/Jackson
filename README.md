@@ -17,4 +17,5 @@ Read our [How We Did It](https://github.com/govex/Jackson/blob/master/Jackson%20
 # Training Presentation
 [Training presentation](https://github.com/govex/Jackson/blob/master/Jackson%20MS%20Training%20Presentation.pdf) about finding, cleaning, and analyzing data. 
 
+# Contact
 If you would like more information, please contact me at nghadji@jhu.edu.
